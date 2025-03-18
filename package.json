@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "doctor": "npx @react-native-community/cli doctor",
+    "generate-icon": "npx @svgr/cli ./src/assets/icons & eslint . --fix",
     "prepare": "lefthook install",
     "lint": "eslint . --max-warnings=0",
     "types": "tsc --noEmit --skipLibCheck",
@@ -23,15 +24,28 @@
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
     "@babel/runtime": "^7.25.0",
+    "@eslint/js": "^9.22.0",
     "@react-native-community/cli": "15.0.1",
     "@react-native-community/cli-platform-android": "15.0.1",
     "@react-native-community/cli-platform-ios": "15.0.1",
     "@react-native/babel-preset": "0.78.0",
     "@react-native/metro-config": "0.78.0",
     "@react-native/typescript-config": "0.78.0",
+    "@svgr/cli": "^8.1.0",
     "@types/react": "^19.0.0",
-    "eslint": "^8.19.0",
-    "typescript": "5.0.4"
+    "babel-plugin-module-resolver": "^5.0.2",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-native": "^5.0.0",
+    "lefthook": "^1.11.3",
+    "prettier": "^3.5.3",
+    "reactotron-react-native": "^5.1.12",
+    "typescript": "5.0.4",
+    "typescript-eslint": "^8.26.1"
   },
   "engines": {
     "node": ">=18"
