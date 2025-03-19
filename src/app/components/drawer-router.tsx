@@ -7,7 +7,9 @@ const Drawer = createDrawerNavigator();
 
 export const DrawerRouter = () => (
   <NavigationContainer onReady={() => hide({ fade: true })}>
-    <Drawer.Navigator initialRouteName="services">
+    <Drawer.Navigator
+      initialRouteName="services"
+      screenOptions={{ headerShown: false }}>
       <Drawer.Screen
         name="mission"
         component={Screens.MissionsScreen}
