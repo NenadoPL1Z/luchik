@@ -1,6 +1,8 @@
-import { SafeAreaView } from "react-native";
+import { StatusBar } from "react-native";
+import { COLORS_MAP } from "@app/shared/types";
 import { IS_DEV } from "@app/shared/constants";
-import { GeneralProvider, SplashProvider } from "./providers";
+import { GeneralProvider } from "./providers";
+import { DrawerRouter } from "./components";
 import "./inits";
 
 if (IS_DEV) {
@@ -11,9 +13,11 @@ if (IS_DEV) {
 export const App = () => {
   return (
     <GeneralProvider>
-      <SplashProvider>
-        <SafeAreaView>{null}</SafeAreaView>
-      </SplashProvider>
+      <StatusBar
+        barStyle="dark-content"
+        backgroundColor={COLORS_MAP.third}
+      />
+      <DrawerRouter />
     </GeneralProvider>
   );
 };
