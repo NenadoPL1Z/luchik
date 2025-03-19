@@ -5,4 +5,5 @@ export const COLORS_MAP = {
   white: "#FFFFFF",
   third: "#FFF8E7",
   black: "#000000",
-};
+} as const;
+export type Colors = keyof typeof COLORS_MAP;

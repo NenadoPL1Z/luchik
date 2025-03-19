@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "doctor": "npx @react-native-community/cli doctor",
-    "generate-icon": "npx @svgr/cli ./src/assets/icons & eslint . --fix",
+    "generate-icon": "npx @svgr/cli ./src/shared/ui/icons/assets & eslint . --fix",
     "prepare": "lefthook install",
     "lint": "eslint . --max-warnings=0",
     "types": "tsc --noEmit --skipLibCheck",

@@ -26,6 +26,7 @@ const ignores = [
   "dist",
   "build",
   "node_modules",
+  "svgr.config.js",
   "babel.config.js",
   "metro.config.js",
   "react-native.config.js",
@@ -97,16 +98,7 @@ module.exports = typescript.config(
       "import/order": [
         "error",
         {
-          groups: [
-            "builtin",
-            "external",
-            "internal",
-            "index",
-            "sibling",
-            "parent",
-            "object",
-            "type",
-          ],
+          groups: ["builtin", "external", "internal", "index", "sibling", "parent", "object", "type"],
         },
       ],
     },
@@ -117,10 +109,7 @@ module.exports = typescript.config(
     rules: {
       "react/hook-use-state": "error",
       "react/jsx-boolean-value": ["error", "always"],
-      "react/jsx-curly-brace-presence": [
-        "error",
-        { props: "never", children: "ignore" },
-      ],
+      "react/jsx-curly-brace-presence": ["error", { props: "never", children: "ignore" }],
       "react/jsx-no-constructed-context-values": "error",
       "react/jsx-no-useless-fragment": "error",
       "react/no-array-index-key": "error",
