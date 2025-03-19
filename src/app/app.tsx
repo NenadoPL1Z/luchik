@@ -1,6 +1,7 @@
-import { SafeAreaView, Text } from "react-native";
+import { SafeAreaView } from "react-native";
 import { IS_DEV } from "@app/shared/constants";
-import { GeneralProvider } from "./providers";
+import { GeneralProvider, SplashProvider } from "./providers";
+import "./inits";
 
 if (IS_DEV) {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -10,9 +11,9 @@ if (IS_DEV) {
 export const App = () => {
   return (
     <GeneralProvider>
-      <SafeAreaView>
-        <Text>123</Text>
-      </SafeAreaView>
+      <SplashProvider>
+        <SafeAreaView>{null}</SafeAreaView>
+      </SplashProvider>
     </GeneralProvider>
   );
 };
