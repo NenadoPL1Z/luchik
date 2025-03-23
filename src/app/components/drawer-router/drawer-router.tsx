@@ -5,11 +5,13 @@ import { Screens, RouteNames, type Navigator } from "@app/screens";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { DrawerContent } from "./ui";
 import { styles } from "./drawer-router.styles";
+import { PADDING_VERTICAL_MIN } from "./constants.ts";
 
 const Drawer = createDrawerNavigator<Navigator>();
 
 export const DrawerRouter = () => {
   const { top } = useSafeAreaInsets();
+  const paddingVertical = top > PADDING_VERTICAL_MIN ? top : PADDING_VERTICAL_MIN;
 
   return (
     <NavigationContainer onReady={() => hide({ fade: true })}>
@@ -19,7 +21,7 @@ export const DrawerRouter = () => {
         screenOptions={{
           headerShown: false,
           drawerType: "front",
-          drawerStyle: [styles.drawerStyle, { paddingTop: top }],
+          drawerStyle: [styles.drawerStyle, { paddingVertical }],
         }}>
         <Drawer.Screen
           name={RouteNames.missions}

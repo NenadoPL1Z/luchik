@@ -6,4 +6,4 @@ export const COLORS_MAP = {
   third: "#FFF8E7",
   black: "#000000",
 } as const;
-export type Colors = keyof typeof COLORS_MAP;
+export type ColorName = keyof typeof COLORS_MAP;
