@@ -1,2 +1,2 @@
 export * from "./constants";
-export { PADDING_MAP } from "./padding";
+export { OFFSET_MAP } from "./offset";
