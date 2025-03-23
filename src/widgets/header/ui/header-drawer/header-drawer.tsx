@@ -1,3 +1,19 @@
-export const HeaderDrawer = () => {
-  return null;
+import { Flex, Touchable, Typography } from "@app/shared/ui";
+import { PADDING_MAP } from "@app/shared/constants";
+import type { HeaderDrawerProps } from "./types";
+
+export const HeaderDrawer = ({ title, onPress }: HeaderDrawerProps) => {
+  return (
+    <Flex
+      style={{ paddingHorizontal: PADDING_MAP.HORIZONTAL }}
+      gap={12}>
+      <Touchable.Icon
+        icon="MenuIcon24"
+        color="white"
+        backgroundColor="primary"
+        onPress={onPress}
+      />
+      <Typography variant="h1">{title}</Typography>
+    </Flex>
+  );
 };

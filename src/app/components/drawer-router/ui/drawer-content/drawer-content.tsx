@@ -1,13 +1,18 @@
 import { Flex, Touchable } from "@app/shared/ui";
 import { DrawerRouteNames } from "@app/screens";
 import { Layout, Header, Main } from "@app/widgets";
+import { styles } from "./drawer-content.styles";
 import type { DrawerContentProps } from "./types";
 
 export const DrawerContent = (props: DrawerContentProps) => {
   return (
-    <Layout backgroundColor="main">
+    <Layout
+      style={styles.root}
+      backgroundColor="main">
       <Header.Close onPress={props.navigation.closeDrawer} />
-      <Main withBackground={false}>
+      <Main
+        withBackground={false}
+        withPadding={false}>
         <Flex
           flexDirection="column"
           gap={8}>

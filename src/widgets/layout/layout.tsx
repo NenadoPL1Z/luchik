@@ -4,7 +4,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { styles } from "./layout.styles";
 import type { LayoutProps } from "./types";
 
-export const Layout = ({ backgroundColor = "third", children }: LayoutProps) => {
+export const Layout = ({ style = {}, backgroundColor = "third", children }: LayoutProps) => {
   const { top } = useSafeAreaInsets();
   return (
     <Flex
@@ -18,6 +18,7 @@ export const Layout = ({ backgroundColor = "third", children }: LayoutProps) => 
           paddingTop: top || styles.root.paddingVertical,
           backgroundColor: COLORS_MAP[backgroundColor],
         },
+        style,
       ]}>
       {children}
     </Flex>
