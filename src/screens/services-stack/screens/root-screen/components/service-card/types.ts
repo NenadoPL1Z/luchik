@@ -1,5 +1,3 @@
-export type ServiceCardProps = {
-  title: string;
-  image: string;
-  subElements: string[];
-};
+import type { Tree } from "../../../../types";
+
+export type ServiceCardProps = Omit<Tree, "children">;

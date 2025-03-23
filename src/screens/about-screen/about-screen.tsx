@@ -7,25 +7,11 @@ import type { AboutScreenProps } from "../types";
 export const AboutScreen = ({ navigation }: AboutScreenProps) => {
   return (
     <Layout>
-      <Header.Drawer
-        title="О приложении"
-        onPress={navigation.openDrawer}
-      />
+      <Header.Drawer title="О приложении" onPress={navigation.openDrawer} />
       <Main>
-        <Flex
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-          style={{ marginBottom: 8 }}
-          gap={4}>
-          <Image
-            width={180}
-            height={160}
-            source={require("./assets/images/logotype.png")}
-          />
-          <Typography
-            style={{ opacity: 0.4 }}
-            variant="p">
+        <Flex flexDirection="column" justifyContent="center" alignItems="center" style={{ marginBottom: 8 }} gap={4}>
+          <Image width={180} height={160} source={require("./assets/images/logotype.png")} />
+          <Typography style={{ opacity: 0.4 }} variant="p">
             Версия {getVersion()}
           </Typography>
         </Flex>

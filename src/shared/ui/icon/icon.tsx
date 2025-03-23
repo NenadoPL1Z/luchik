@@ -12,11 +12,7 @@ export const Icon = ({ name, color, backgroundColor, ...props }: IconProps) => {
     : { Component: Fragment, style: {} };
   return (
     <Root.Component style={Root.style}>
-      <IconComponent
-        style={styles.root}
-        color={COLORS_MAP[color]}
-        {...props}
-      />
+      <IconComponent style={styles.root} color={COLORS_MAP[color]} {...props} />
     </Root.Component>
   );
 };

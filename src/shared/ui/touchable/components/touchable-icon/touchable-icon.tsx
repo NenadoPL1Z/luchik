@@ -5,11 +5,7 @@ import type { TouchableIconProps } from "./types";
 export const TouchableIcon = ({ onPress, icon, color = "primary", ...svgProps }: TouchableIconProps) => {
   return (
     <TouchableOpacity onPress={onPress}>
-      <Icon
-        name={icon}
-        color={color}
-        {...svgProps}
-      />
+      <Icon name={icon} color={color} {...svgProps} />
     </TouchableOpacity>
   );
 };

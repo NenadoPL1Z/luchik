@@ -19,22 +19,10 @@ export const DrawerRouter = () => {
           drawerType: "front",
           drawerStyle: styles.drawerStyle,
         }}>
-        <Drawer.Screen
-          name={DrawerRouteNames.missions}
-          component={Screens.MissionsScreen}
-        />
-        <Drawer.Screen
-          name={DrawerRouteNames.services}
-          component={Screens.ServiceStack}
-        />
-        <Drawer.Screen
-          name={DrawerRouteNames.contacts}
-          component={Screens.ContactsScreen}
-        />
-        <Drawer.Screen
-          name={DrawerRouteNames.about}
-          component={Screens.AboutScreen}
-        />
+        <Drawer.Screen name={DrawerRouteNames.missions} component={Screens.MissionsScreen} />
+        <Drawer.Screen name={DrawerRouteNames.services} component={Screens.ServiceStack} />
+        <Drawer.Screen name={DrawerRouteNames.contacts} component={Screens.ContactsScreen} />
+        <Drawer.Screen name={DrawerRouteNames.about} component={Screens.AboutScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

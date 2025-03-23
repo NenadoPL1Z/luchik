@@ -5,10 +5,7 @@ import type { MissionsScreenProps } from "../types";
 export const MissionsScreen = ({ navigation }: MissionsScreenProps) => {
   return (
     <Layout>
-      <Header.Drawer
-        title="Миссия и цели"
-        onPress={navigation.openDrawer}
-      />
+      <Header.Drawer title="Миссия и цели" onPress={navigation.openDrawer} />
       <Main>
         <Typography variant="p">
           Деятельность учреждения направлена на предоставление социальных услуг и мер социальной поддержки для граждан

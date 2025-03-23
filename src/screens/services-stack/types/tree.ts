@@ -12,7 +12,8 @@ export type TreeChildren = {
 
 export type Tree = {
   title: string;
-  image: string;
+  // eslint-disable-next-line
+  image: any;
   list: string[];
   children: TreeChildren[];
 };

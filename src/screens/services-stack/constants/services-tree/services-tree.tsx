@@ -1,10 +1,10 @@
 import { View } from "react-native";
 import type { Tree } from "../../types";
 
-export const SERVICES_TREE: Record<string, Tree> = {
-  social_support: {
+export const SERVICES_TREE: Tree[] = [
+  {
     title: "Меры социальной поддержки",
-    image: "./assets/images/social_support.png",
+    image: require("./assets/images/social_support.png"),
     list: ["Льготы на проезд", "Компенсации за ЖКУ, газ и топливо"],
     children: [
       {
@@ -36,7 +36,4 @@ export const SERVICES_TREE: Record<string, Tree> = {
       },
     ],
   },
-  // rainbow_playground: {},
-  // rental_point: {},
-  // social_services: {},
-};
+];

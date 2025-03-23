@@ -6,16 +6,10 @@ import type { DrawerContentProps } from "./types";
 
 export const DrawerContent = ({ navigation }: DrawerContentProps) => {
   return (
-    <Layout
-      style={styles.root}
-      backgroundColor="main">
+    <Layout style={styles.root} backgroundColor="main">
       <Header.Close onPress={navigation.closeDrawer} />
-      <Main
-        withBackground={false}
-        withPadding={false}>
-        <Flex
-          flexDirection="column"
-          gap={8}>
+      <Main withBackground={false} withPadding={false}>
+        <Flex flexDirection="column" gap={8}>
           <Touchable
             icon="LightningIcon24"
             title="Миссия и цели компании"

@@ -4,9 +4,7 @@ import type { TouchableContainerProps } from "./types";
 
 export const TouchableContainer = ({ onPress, children }: TouchableContainerProps) => {
   return (
-    <TouchableOpacity
-      style={styles.root}
-      onPress={onPress}>
+    <TouchableOpacity style={styles.root} onPress={onPress}>
       {children}
     </TouchableOpacity>
   );

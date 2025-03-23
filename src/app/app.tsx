@@ -10,10 +10,7 @@ if (IS_DEV) require("../../reactotron.config.js");
 export const App = () => {
   return (
     <GeneralProvider>
-      <StatusBar
-        barStyle="dark-content"
-        backgroundColor={COLORS_MAP.third}
-      />
+      <StatusBar barStyle="dark-content" backgroundColor={COLORS_MAP.third} />
       <DrawerRouter />
     </GeneralProvider>
   );

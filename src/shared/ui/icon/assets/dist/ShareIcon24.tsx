@@ -2,12 +2,7 @@ import Svg, { Mask, Path, G } from "react-native-svg";
 import type { SvgProps } from "react-native-svg";
 
 const SvgShareIcon24 = (props: SvgProps) => (
-  <Svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
-    fill="none"
-    {...props}>
+  <Svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" {...props}>
     <Mask
       id="share-icon-24_svg__a"
       width={24}
@@ -18,10 +13,7 @@ const SvgShareIcon24 = (props: SvgProps) => (
       style={{
         maskType: "alpha",
       }}>
-      <Path
-        fill={props.color || props.fill || "currentColor"}
-        d="M0 0h24v24H0z"
-      />
+      <Path fill={props.color || props.fill || "currentColor"} d="M0 0h24v24H0z" />
     </Mask>
     <G mask="url(#share-icon-24_svg__a)">
       <Path

@@ -62,6 +62,7 @@ module.exports = typescript.config(
     rules: {
       "no-extra-boolean-cast": "error",
       "no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-unused-vars": "error",
       "@typescript-eslint/no-duplicate-enum-values": "off",
       "@typescript-eslint/no-require-imports": "off",

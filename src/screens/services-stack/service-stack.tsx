@@ -7,26 +7,13 @@ const NativeStack = createNativeStackNavigator<Navigator>();
 
 export const ServiceStack = ({ navigation }: ServicesStackProps) => {
   return (
-    <NativeStack.Navigator
-      initialRouteName={RouteNames.root}
-      screenOptions={{ headerShown: false }}>
+    <NativeStack.Navigator initialRouteName={RouteNames.root} screenOptions={{ headerShown: false }}>
       <NativeStack.Screen
         name={RouteNames.root}
-        component={(props: RootScreenProps) => (
-          <RootScreen
-            {...props}
-            onOpenDrawer={navigation.openDrawer}
-          />
-        )}
+        component={(props: RootScreenProps) => <RootScreen {...props} onOpenDrawer={navigation.openDrawer} />}
       />
-      <NativeStack.Screen
-        name={RouteNames.service}
-        component={ServiceScreen}
-      />
-      <NativeStack.Screen
-        name={RouteNames.content}
-        component={ContentScreen}
-      />
+      <NativeStack.Screen name={RouteNames.service} component={ServiceScreen} />
+      <NativeStack.Screen name={RouteNames.content} component={ContentScreen} />
     </NativeStack.Navigator>
   );
 };
