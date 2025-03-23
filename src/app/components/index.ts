@@ -1,1 +1,1 @@
-export { DrawerRouter } from "./drawer-router.tsx";
+export { DrawerRouter } from "./drawer-router";
