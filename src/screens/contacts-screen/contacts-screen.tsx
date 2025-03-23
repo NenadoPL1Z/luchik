@@ -2,6 +2,7 @@ import { Image, Linking } from "react-native";
 import { Header, Layout, Main } from "@app/widgets";
 import { Flex, Typography } from "@app/shared/ui";
 import { TextBlock } from "./components";
+import { styles } from "./contacts-screen.styles";
 import type { ContactsScreenProps } from "../types";
 
 export const ContactsScreen = ({ navigation }: ContactsScreenProps) => {
@@ -9,7 +10,7 @@ export const ContactsScreen = ({ navigation }: ContactsScreenProps) => {
     <Layout>
       <Header.Drawer title="Контакты" onPress={navigation.openDrawer} />
       <Main>
-        <Image width={315} height={212} style={{ marginBottom: 16 }} source={require("./assets/images/map.jpg")} />
+        <Image style={styles.map} resizeMode="contain" source={require("./assets/images/map.jpg")} />
         <Flex alignItems="flex-start" flexDirection="column" gap={8}>
           {null}
           <TextBlock icon="LandmarkIcon24" title="Адрес">
@@ -33,13 +34,13 @@ export const ContactsScreen = ({ navigation }: ContactsScreenProps) => {
               www.socza.ru
             </Typography>
           </TextBlock>
-          <Image width={124} height={124} source={require("./assets/images/qr-web.jpg")} />
+          <Image style={styles.qr} source={require("./assets/images/qr-web.jpg")} />
           <TextBlock icon="ShareIcon24" title="Социальные сети">
             <Typography variant="p" color="main" onPress={() => Linking.openURL("https://vk.com/club185287122")}>
               ВКонтакте
             </Typography>
           </TextBlock>
-          <Image width={124} height={124} source={require("./assets/images/qr-vk.jpg")} />
+          <Image style={styles.qr} source={require("./assets/images/qr-vk.jpg")} />
         </Flex>
       </Main>
     </Layout>

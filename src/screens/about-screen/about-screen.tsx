@@ -2,6 +2,7 @@ import { Header, Layout, Main } from "@app/widgets";
 import { Flex, Typography } from "@app/shared/ui";
 import { Image } from "react-native";
 import { getVersion } from "react-native-device-info";
+import { styles } from "./about-screen.styles";
 import type { AboutScreenProps } from "../types";
 
 export const AboutScreen = ({ navigation }: AboutScreenProps) => {
@@ -9,9 +10,9 @@ export const AboutScreen = ({ navigation }: AboutScreenProps) => {
     <Layout>
       <Header.Drawer title="О приложении" onPress={navigation.openDrawer} />
       <Main>
-        <Flex flexDirection="column" justifyContent="center" alignItems="center" style={{ marginBottom: 8 }} gap={4}>
-          <Image width={180} height={160} source={require("./assets/images/logotype.png")} />
-          <Typography style={{ opacity: 0.4 }} variant="p">
+        <Flex style={styles.about} flexDirection="column" justifyContent="center" alignItems="center" gap={4}>
+          <Image style={styles.logo} source={require("./assets/images/logotype.png")} />
+          <Typography style={styles.version} variant="p">
             Версия {getVersion()}
           </Typography>
         </Flex>
