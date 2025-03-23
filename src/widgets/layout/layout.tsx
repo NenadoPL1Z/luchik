@@ -5,7 +5,8 @@ import { styles } from "./layout.styles";
 import type { LayoutProps } from "./types";
 
 export const Layout = ({ style = {}, backgroundColor = "third", children }: LayoutProps) => {
-  const { top } = useSafeAreaInsets();
+  const { top, right, left } = useSafeAreaInsets();
+
   return (
     <Flex
       flexDirection="column"
@@ -16,6 +17,8 @@ export const Layout = ({ style = {}, backgroundColor = "third", children }: Layo
         styles.root,
         {
           paddingTop: top || styles.root.paddingVertical,
+          paddingRight: right,
+          paddingLeft: left,
           backgroundColor: COLORS_MAP[backgroundColor],
         },
         style,
