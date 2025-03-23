@@ -1,9 +1,12 @@
 import { Flex, Touchable, Typography } from "@app/shared/ui";
+import { PADDING_MAP } from "@app/shared/constants";
 import type { HeaderCloseProps } from "./types";
 
 export const HeaderClose = ({ onPress }: HeaderCloseProps) => {
   return (
-    <Flex gap={12}>
+    <Flex
+      style={{ paddingHorizontal: PADDING_MAP.HORIZONTAL }}
+      gap={12}>
       <Touchable.Icon
         icon="CloseIcon24"
         backgroundColor="third"

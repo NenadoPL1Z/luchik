@@ -1,21 +1,10 @@
-import type { FlexStyle } from "react-native";
+import type { FlexStyle, ViewStyle } from "react-native";
 import type { ReactNode } from "react";
 
-type Styles = Pick<
-  FlexStyle,
-  | "flexDirection"
-  | "flexGrow"
-  | "flexShrink"
-  | "justifyContent"
-  | "alignItems"
-  | "alignSelf"
-  | "gap"
-  | "rowGap"
-  | "columnGap"
-  | "marginBottom"
->;
+type Styles = Pick<FlexStyle, "flexDirection" | "flexGrow" | "justifyContent" | "alignItems" | "gap">;
 
 export type FlexProps = Styles & {
+  style?: ViewStyle | ViewStyle[];
   fullWidth?: boolean;
   children: ReactNode;
 };
