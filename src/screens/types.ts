@@ -1,13 +1,13 @@
-export enum RouteNames {
+export enum DrawerRouteNames {
   missions = "missions",
   services = "services",
   contacts = "contacts",
   about = "about",
 }
 
-export type Navigator = {
-  [RouteNames.missions]: undefined;
-  [RouteNames.services]: undefined;
-  [RouteNames.contacts]: undefined;
-  [RouteNames.about]: undefined;
+export type DrawerNavigator = {
+  [DrawerRouteNames.missions]: undefined;
+  [DrawerRouteNames.services]: undefined;
+  [DrawerRouteNames.contacts]: undefined;
+  [DrawerRouteNames.about]: undefined;
 };

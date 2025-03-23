@@ -16,5 +16,6 @@ type Styles = Pick<
 >;
 
 export type FlexProps = Styles & {
+  fullWidth?: boolean;
   children: ReactNode;
 };

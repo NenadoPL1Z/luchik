@@ -1,13 +1,14 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import { hide } from "react-native-bootsplash";
-import { Screens, RouteNames, type Navigator } from "@app/screens";
+import { Screens, DrawerRouteNames } from "@app/screens";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { DrawerContent } from "./ui";
 import { styles } from "./drawer-router.styles";
 import { PADDING_VERTICAL_MIN } from "./constants.ts";
+import type { DrawerNavigator } from "@app/screens";
 
-const Drawer = createDrawerNavigator<Navigator>();
+const Drawer = createDrawerNavigator<DrawerNavigator>();
 
 export const DrawerRouter = () => {
   const { top } = useSafeAreaInsets();
@@ -16,7 +17,7 @@ export const DrawerRouter = () => {
   return (
     <NavigationContainer onReady={() => hide({ fade: true })}>
       <Drawer.Navigator
-        initialRouteName={RouteNames.services}
+        initialRouteName={DrawerRouteNames.services}
         drawerContent={(props) => <DrawerContent {...props} />}
         screenOptions={{
           headerShown: false,
@@ -24,19 +25,19 @@ export const DrawerRouter = () => {
           drawerStyle: [styles.drawerStyle, { paddingVertical }],
         }}>
         <Drawer.Screen
-          name={RouteNames.missions}
+          name={DrawerRouteNames.missions}
           component={Screens.MissionsScreen}
         />
         <Drawer.Screen
-          name={RouteNames.services}
+          name={DrawerRouteNames.services}
           component={Screens.ServiceStack}
         />
         <Drawer.Screen
-          name={RouteNames.contacts}
+          name={DrawerRouteNames.contacts}
           component={Screens.ContactsScreen}
         />
         <Drawer.Screen
-          name={RouteNames.about}
+          name={DrawerRouteNames.about}
           component={Screens.AboutScreen}
         />
       </Drawer.Navigator>

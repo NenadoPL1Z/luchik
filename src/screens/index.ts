@@ -1,2 +1,2 @@
 export { Screens } from "./screens";
-export { RouteNames, type Navigator } from "./types";
+export { DrawerRouteNames, type DrawerNavigator } from "./types";

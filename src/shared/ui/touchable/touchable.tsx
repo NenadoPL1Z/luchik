@@ -2,9 +2,9 @@ import { Flex, Icon, Typography } from "@app/shared/ui";
 import { TouchableContainer } from "./ui";
 import type { TouchableProps } from "./types";
 
-export const Touchable = ({ title, icon }: TouchableProps) => {
+export const Touchable = ({ title, icon, onPress }: TouchableProps) => {
   return (
-    <TouchableContainer>
+    <TouchableContainer onPress={onPress}>
       <Flex gap={12}>
         <Icon
           color="primary"
