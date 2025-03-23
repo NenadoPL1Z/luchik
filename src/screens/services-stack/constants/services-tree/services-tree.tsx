@@ -1,7 +1,10 @@
-export const SERVICES_TREE = {
+import { View } from "react-native";
+import type { Tree } from "../../types";
+
+export const SERVICES_TREE: Record<string, Tree> = {
   social_support: {
     title: "Меры социальной поддержки",
-    image: require("./assets/images/social_support.png"),
+    image: "./assets/images/social_support.png",
     list: ["Льготы на проезд", "Компенсации за ЖКУ, газ и топливо"],
     children: [
       {
@@ -9,7 +12,7 @@ export const SERVICES_TREE = {
         content: [
           {
             title: "Ежемесячная денежная компенсация за ЖКУ",
-            render: () => undefined,
+            render: () => <View />,
           },
         ],
       },
@@ -18,7 +21,7 @@ export const SERVICES_TREE = {
         content: [
           {
             title: "Льготный проезд на автомобильном транспорте общего пользования (кроме такси)",
-            render: () => undefined,
+            render: () => <View />,
           },
         ],
       },
@@ -27,7 +30,7 @@ export const SERVICES_TREE = {
         content: [
           {
             title: "Компенсация за оплату газа либо твердого топлива",
-            render: () => undefined,
+            render: () => <View />,
           },
         ],
       },
