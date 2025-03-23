@@ -31,26 +31,6 @@ export const DrawerContent = (props: DrawerContentProps) => {
             title="О приложении"
             onPress={() => props.navigation.navigate(DrawerRouteNames.about)}
           />
-          <Touchable
-            icon="LightningIcon24"
-            title="Миссия и цели компании"
-            onPress={() => props.navigation.navigate(DrawerRouteNames.missions)}
-          />
-          <Touchable
-            icon="PeopleIcon24"
-            title="Услуги"
-            onPress={() => props.navigation.navigate(DrawerRouteNames.services)}
-          />
-          <Touchable
-            icon="LandmarkIcon24"
-            title="Контакты"
-            onPress={() => props.navigation.navigate(DrawerRouteNames.contacts)}
-          />
-          <Touchable
-            icon="BookIcon24"
-            title="О приложении"
-            onPress={() => props.navigation.navigate(DrawerRouteNames.about)}
-          />
         </Flex>
       </Main>
     </Layout>
