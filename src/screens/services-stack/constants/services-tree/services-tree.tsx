@@ -4,7 +4,7 @@ import type { Tree } from "../../types";
 export const SERVICES_TREE: Tree[] = [
   {
     title: "Меры социальной поддержки",
-    image: require("./assets/images/social_support.png"),
+    image: require("./assets/images/social-support.png"),
     list: ["Льготы на проезд", "Компенсации за ЖКУ, газ и топливо"],
     children: [
       {
@@ -30,6 +30,61 @@ export const SERVICES_TREE: Tree[] = [
         content: [
           {
             title: "Компенсация за оплату газа либо твердого топлива",
+            render: () => <View />,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Площадка ”Радуга”",
+    image: require("./assets/images/rainbow-playground.png"),
+    list: ["Мы вместе", "Самоделкин", "Узнаём мир вместе"],
+    children: [
+      {
+        title: "Мы вместе",
+        content: [],
+      },
+      {
+        title: "Самоделкин",
+        content: [],
+      },
+      {
+        title: "Узнаем мир вместе",
+        content: [],
+      },
+    ],
+  },
+  {
+    title: "Пункт проката",
+    image: require("./assets/images/rental-point.png"),
+    list: ["Безвозмездная выдача технических средств реабилитации"],
+    content: [
+      {
+        title: "Пункт проката",
+        render: () => <View />,
+      },
+    ],
+  },
+  {
+    title: "Социальные услуги",
+    image: require("./assets/images/social-services.png"),
+    list: ["Реабилитация детей", "Услуги психолога"],
+    children: [
+      {
+        title: "Реабилитация детей",
+        content: [
+          {
+            title: "Реабилитация детей-инвалидов и детей с ограниченными возможностями",
+            render: () => <View />,
+          },
+        ],
+      },
+      {
+        title: "Услуги психолога",
+        content: [
+          {
+            title: "Услуги психолога",
             render: () => <View />,
           },
         ],

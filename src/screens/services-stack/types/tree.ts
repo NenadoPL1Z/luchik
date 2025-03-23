@@ -15,5 +15,6 @@ export type Tree = {
   // eslint-disable-next-line
   image: any;
   list: string[];
-  children: TreeChildren[];
+  children?: TreeChildren[];
+  content?: TreeContent[];
 };
