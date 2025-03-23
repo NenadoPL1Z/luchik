@@ -15,6 +15,13 @@ export const styles = StyleSheet.create({
     fontWeight: "500",
     fontStyle: "normal",
   },
+  h3: {
+    fontFamily: "SFProText-Semibold",
+    fontSize: 15,
+    lineHeight: 19,
+    fontWeight: "600",
+    fontStyle: "normal",
+  },
   p: {
     fontFamily: "SFProText-Regular",
     fontSize: 15,

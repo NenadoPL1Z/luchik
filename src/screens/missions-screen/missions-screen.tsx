@@ -7,7 +7,7 @@ export const MissionsScreen = ({ navigation }: MissionsScreenProps) => {
     <Layout>
       <Header.Drawer
         title="Миссия и цели"
-        onPress={() => navigation.openDrawer()}
+        onPress={navigation.openDrawer}
       />
       <Main>
         <Typography variant="p">

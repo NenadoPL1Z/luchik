@@ -9,7 +9,7 @@ export const AboutScreen = ({ navigation }: AboutScreenProps) => {
     <Layout>
       <Header.Drawer
         title="О приложении"
-        onPress={() => navigation.openDrawer()}
+        onPress={navigation.openDrawer}
       />
       <Main>
         <Flex

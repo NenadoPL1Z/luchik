@@ -7,6 +7,7 @@ import type { MainProps } from "./types";
 export const Main = ({ withBackground = true, withPadding = true, children }: MainProps) => {
   return (
     <ScrollView
+      showsHorizontalScrollIndicator={false}
       style={[
         styles.root,
         {
