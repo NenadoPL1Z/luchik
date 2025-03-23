@@ -1,17 +1,20 @@
-import { SafeAreaView, Text, TouchableOpacity } from "react-native";
-import { RouteNames, type RootScreenProps } from "../../types";
+import { Header, Layout, Main } from "@app/widgets";
+// import { RouteNames } from "../../types";
+// import { ServiceCard } from "./components";
+import type { CustomRootScreenProps } from "./types";
 
-export const RootScreen = ({ navigation }: RootScreenProps) => {
-  const handlePushService = () => {
-    navigation.navigate(RouteNames.service);
-  };
+export const RootScreen = ({ onOpenDrawer }: CustomRootScreenProps) => {
+  // const handlePushService = () => {
+  //   navigation.navigate(RouteNames.service);
+  // };
 
   return (
-    <SafeAreaView>
-      <Text>services-root-screen</Text>
-      <TouchableOpacity onPress={handlePushService}>
-        <Text>123</Text>
-      </TouchableOpacity>
-    </SafeAreaView>
+    <Layout>
+      <Header.Drawer
+        title="Услуги"
+        onPress={onOpenDrawer}
+      />
+      <Main>{null}</Main>
+    </Layout>
   );
 };

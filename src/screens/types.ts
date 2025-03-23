@@ -15,6 +15,6 @@ export type DrawerNavigator = {
 };
 
 export type MissionsScreenProps = DrawerScreenProps<DrawerNavigator, DrawerRouteNames.missions>;
-export type ServicesScreenProps = DrawerScreenProps<DrawerNavigator, DrawerRouteNames.services>;
+export type ServicesStackProps = DrawerScreenProps<DrawerNavigator, DrawerRouteNames.services>;
 export type ContactsScreenProps = DrawerScreenProps<DrawerNavigator, DrawerRouteNames.contacts>;
 export type AboutScreenProps = DrawerScreenProps<DrawerNavigator, DrawerRouteNames.about>;
