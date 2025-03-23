@@ -12,6 +12,7 @@ type Styles = Pick<
   | "gap"
   | "rowGap"
   | "columnGap"
+  | "marginBottom"
 >;
 
 export type FlexProps = Styles & {

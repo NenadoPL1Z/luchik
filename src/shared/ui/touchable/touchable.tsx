@@ -1,10 +1,21 @@
-import { Text } from "react-native";
+import { Flex, Icon, Typography } from "@app/shared/ui";
 import { TouchableContainer } from "./ui";
+import type { TouchableProps } from "./types";
 
-export const Touchable = () => {
+export const Touchable = ({ title, icon }: TouchableProps) => {
   return (
     <TouchableContainer>
-      <Text>123</Text>
+      <Flex gap={12}>
+        <Icon
+          color="primary"
+          name={icon}
+        />
+        <Typography
+          variant="p"
+          color="primary">
+          {title}
+        </Typography>
+      </Flex>
     </TouchableContainer>
   );
 };
