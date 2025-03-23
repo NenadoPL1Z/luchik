@@ -2,12 +2,12 @@ import { Header, Layout, Main } from "@app/widgets";
 import { Typography } from "@app/shared/ui";
 import type { MissionsScreenProps } from "../types";
 
-export const MissionsScreen = (props: MissionsScreenProps) => {
+export const MissionsScreen = ({ navigation }: MissionsScreenProps) => {
   return (
     <Layout>
       <Header.Drawer
         title="Миссия и цели"
-        onPress={() => props.navigation.openDrawer()}
+        onPress={() => navigation.openDrawer()}
       />
       <Main>
         <Typography variant="p">
