@@ -17,7 +17,7 @@ export const ServiceCard = ({ title, image, list }: ServiceCardProps) => {
             ))}
           </View>
         </Flex>
-        <Image style={styles.image} width={156} height={145} source={image} />
+        <Image style={styles.image} source={image} />
       </Flex>
     </TouchableOpacity>
   );

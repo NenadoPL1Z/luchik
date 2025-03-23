@@ -15,6 +15,8 @@ export const styles = StyleSheet.create({
     maxWidth: 180,
   },
   image: {
+    width: 156,
+    height: 145,
     transform: [{ translateY: -15 }],
   },
 });
