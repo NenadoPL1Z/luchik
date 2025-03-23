@@ -1,7 +1,7 @@
 import { SafeAreaView, Text } from "react-native";
-import type { ServiceScreenProps } from "../../types";
+import type { ContentScreenProps } from "../../types";
 
-export const ServiceScreen = ({ route }: ServiceScreenProps) => {
+export const ContentScreen = ({ route }: ContentScreenProps) => {
   return (
     <SafeAreaView>
       <Text>{route.name}</Text>

@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { RootScreen, ServiceScreen } from "./screens";
+import { RootScreen, ServiceScreen, ContentScreen } from "./screens";
 import { RouteNames, type Navigator, type RootScreenProps } from "./types";
 import type { ServicesStackProps } from "../types";
 
@@ -22,6 +22,10 @@ export const ServiceStack = ({ navigation }: ServicesStackProps) => {
       <NativeStack.Screen
         name={RouteNames.service}
         component={ServiceScreen}
+      />
+      <NativeStack.Screen
+        name={RouteNames.content}
+        component={ContentScreen}
       />
     </NativeStack.Navigator>
   );

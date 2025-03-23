@@ -14,7 +14,7 @@ export const RootScreen = ({ onOpenDrawer }: CustomRootScreenProps) => {
         title="Услуги"
         onPress={onOpenDrawer}
       />
-      <Main>{null}</Main>
+      <Main withBackground={false}>{null}</Main>
     </Layout>
   );
 };
