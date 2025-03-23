@@ -5,10 +5,7 @@ import { GeneralProvider } from "./providers";
 import { DrawerRouter } from "./components";
 import "./inits";
 
-if (IS_DEV) {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  require("../../reactotron.config.js");
-}
+if (IS_DEV) require("../../reactotron.config.js");
 
 export const App = () => {
   return (

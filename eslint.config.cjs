@@ -64,6 +64,7 @@ module.exports = typescript.config(
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": "error",
       "@typescript-eslint/no-duplicate-enum-values": "off",
+      "@typescript-eslint/no-require-imports": "off",
       "@typescript-eslint/consistent-type-imports": [
         "error",
         {
