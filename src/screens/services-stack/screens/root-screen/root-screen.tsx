@@ -9,7 +9,7 @@ export const RootScreen = ({ onOpenDrawer }: CustomRootScreenProps) => {
     <Layout>
       <Header.Drawer title="Услуги" onPress={onOpenDrawer} />
       <Main withBackground={false} withPadding={false}>
-        <Flex gap={8}>
+        <Flex flexDirection="column" gap={8}>
           {SERVICES_TREE.map(({ title, image, list }) => (
             <ServiceCard key={title} title={title} image={image} list={list} />
           ))}

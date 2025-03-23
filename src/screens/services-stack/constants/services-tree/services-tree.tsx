@@ -4,7 +4,7 @@ import type { Tree } from "../../types";
 export const SERVICES_TREE: Tree[] = [
   {
     title: "Меры социальной поддержки",
-    image: require("./assets/images/social-support.png"),
+    image: require("./assets/images/social-support.jpg"),
     list: ["Льготы на проезд", "Компенсации за ЖКУ, газ и топливо"],
     children: [
       {
@@ -38,7 +38,7 @@ export const SERVICES_TREE: Tree[] = [
   },
   {
     title: "Площадка ”Радуга”",
-    image: require("./assets/images/rainbow-playground.png"),
+    image: require("./assets/images/rainbow-playground.jpg"),
     list: ["Мы вместе", "Самоделкин", "Узнаём мир вместе"],
     children: [
       {
@@ -57,7 +57,7 @@ export const SERVICES_TREE: Tree[] = [
   },
   {
     title: "Пункт проката",
-    image: require("./assets/images/rental-point.png"),
+    image: require("./assets/images/rental-point.jpg"),
     list: ["Безвозмездная выдача технических средств реабилитации"],
     content: [
       {
@@ -68,7 +68,7 @@ export const SERVICES_TREE: Tree[] = [
   },
   {
     title: "Социальные услуги",
-    image: require("./assets/images/social-services.png"),
+    image: require("./assets/images/social-services.jpg"),
     list: ["Реабилитация детей", "Услуги психолога"],
     children: [
       {
