@@ -5,19 +5,21 @@ import { styles } from "./main.styles.ts";
 import type { MainProps } from "./types";
 
 export const Main = ({ withBackground = true, withPadding = true, children }: MainProps) => {
+  const paddingKey = withPadding ? "padding" : "paddingHorizontal";
   return (
-    <ScrollView
-      showsHorizontalScrollIndicator={false}
-      style={[
-        styles.root,
-        {
-          width: withPadding ? undefined : "100%",
-          paddingHorizontal: withPadding ? undefined : PADDING_MAP.HORIZONTAL,
-          marginHorizontal: withPadding ? PADDING_MAP.HORIZONTAL : undefined,
-          backgroundColor: withBackground ? COLORS_MAP.white : undefined,
-        },
-      ]}>
-      <View style={{ padding: withPadding ? PADDING_MAP.HORIZONTAL : undefined }}>{children}</View>
-    </ScrollView>
+    <View style={[styles.root, { width: "100%" }]}>
+      <ScrollView
+        showsHorizontalScrollIndicator={false}
+        style={[
+          styles.scroll,
+          {
+            [paddingKey]: PADDING_MAP.HORIZONTAL,
+            marginHorizontal: withPadding ? PADDING_MAP.HORIZONTAL : undefined,
+            backgroundColor: withBackground ? COLORS_MAP.white : undefined,
+          },
+        ]}>
+        {children}
+      </ScrollView>
+    </View>
   );
 };

@@ -5,6 +5,5 @@ type Styles = Pick<FlexStyle, "flexDirection" | "flexGrow" | "justifyContent" | 
 
 export type FlexProps = Styles & {
   style?: ViewStyle | ViewStyle[];
-  fullWidth?: boolean;
   children: ReactNode;
 };
