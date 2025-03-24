@@ -6,5 +6,6 @@ export const styles = StyleSheet.create({
     paddingRight: 0,
     borderTopRightRadius: DRAWER_BORDER_RADIUS,
     borderBottomRightRadius: DRAWER_BORDER_RADIUS,
+    overflow: "hidden",
   },
 });
