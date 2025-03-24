@@ -8,7 +8,8 @@ import type { CustomRootScreenProps } from "./types";
 
 export const RootScreen = ({ onOpenDrawer, navigation }: CustomRootScreenProps) => {
   const handlePushToInner = (service: ServiceTree) => {
-    if (service.content) return navigation.navigate(RouteNames.content, service.content);
+    if (service.content)
+      return navigation.navigate(RouteNames.content, { title: service.title, content: service.content });
     navigation.navigate(RouteNames.service, service);
   };
 

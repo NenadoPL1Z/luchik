@@ -10,7 +10,7 @@ export enum RouteNames {
 export type Navigator = {
   [RouteNames.root]: undefined;
   [RouteNames.service]: ServiceTree;
-  [RouteNames.content]: ServiceTreeContent[];
+  [RouteNames.content]: { title: string; content: ServiceTreeContent[] };
 };
 
 export type RootScreenProps = NativeStackScreenProps<Navigator, RouteNames.root>;
