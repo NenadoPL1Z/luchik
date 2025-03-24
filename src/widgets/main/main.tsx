@@ -10,6 +10,7 @@ export const Main = ({ withBackground = true, withPadding = true, children }: Ma
     <View style={[styles.root, { width: "100%" }]}>
       <ScrollView
         showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.contentContainerStyle}
         style={[
           styles.scroll,
           {

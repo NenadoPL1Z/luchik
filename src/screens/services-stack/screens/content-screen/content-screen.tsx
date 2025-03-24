@@ -9,14 +9,16 @@ export const ContentScreen = ({ route, navigation }: ContentScreenProps) => {
     <Layout>
       <Header.Back title="Контент услуги" onPress={navigation.goBack} />
       <Main>
-        {content.map(({ title, subtitle, render }) => (
-          <Flex key={title} flexDirection="column" gap={8}>
-            <Typography variant="h2" style={{ textAlign: "center" }}>
-              {title}
-            </Typography>
-            {subtitle || render?.()}
-          </Flex>
-        ))}
+        <Flex flexDirection="column" gap={8}>
+          {content.map(({ title, render }) => (
+            <Flex key={title} flexDirection="column" gap={8}>
+              <Typography variant="h2" style={{ textAlign: "center" }}>
+                {title}
+              </Typography>
+              {render()}
+            </Flex>
+          ))}
+        </Flex>
       </Main>
     </Layout>
   );

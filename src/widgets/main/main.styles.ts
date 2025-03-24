@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { OFFSET_MAP } from "@app/shared/constants";
 
 export const styles = StyleSheet.create({
   root: {
@@ -6,5 +7,8 @@ export const styles = StyleSheet.create({
   },
   scroll: {
     borderRadius: 16,
+  },
+  contentContainerStyle: {
+    paddingBottom: OFFSET_MAP.HORIZONTAL,
   },
 });
