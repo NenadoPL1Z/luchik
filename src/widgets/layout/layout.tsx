@@ -4,7 +4,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { styles } from "./layout.styles";
 import type { LayoutProps } from "./types";
 
-export const Layout = ({ style = {}, backgroundColor = "third", children }: LayoutProps) => {
+export const Layout = ({ style = {}, backgroundColor = "secondary", children }: LayoutProps) => {
   const { top, right, left } = useSafeAreaInsets();
 
   return (

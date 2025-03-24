@@ -7,9 +7,9 @@ import type { ServiceTree } from "../../types";
 import type { CustomRootScreenProps } from "./types";
 
 export const RootScreen = ({ onOpenDrawer, navigation }: CustomRootScreenProps) => {
-  const handlePush = (service: ServiceTree) => {
-    if (service.content) return navigation.navigate(RouteNames.content);
-    navigation.navigate(RouteNames.service);
+  const handlePushToInner = (service: ServiceTree) => {
+    if (service.content) return navigation.navigate(RouteNames.content, service.content);
+    navigation.navigate(RouteNames.service, service);
   };
 
   return (
@@ -18,7 +18,7 @@ export const RootScreen = ({ onOpenDrawer, navigation }: CustomRootScreenProps) 
       <Main withBackground={false} withPadding={false}>
         <Flex flexDirection="column" gap={8}>
           {SERVICES_TREE.map((service) => (
-            <ServiceCard key={service.title} {...service} onPush={handlePush} />
+            <ServiceCard key={service.title} {...service} onPush={handlePushToInner} />
           ))}
         </Flex>
       </Main>

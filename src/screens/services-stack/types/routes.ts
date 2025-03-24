@@ -1,3 +1,4 @@
+import type { ServiceTree, ServiceTreeContent } from "./service-tree.ts";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 export enum RouteNames {
@@ -8,8 +9,8 @@ export enum RouteNames {
 
 export type Navigator = {
   [RouteNames.root]: undefined;
-  [RouteNames.service]: undefined;
-  [RouteNames.content]: undefined;
+  [RouteNames.service]: ServiceTree;
+  [RouteNames.content]: ServiceTreeContent[];
 };
 
 export type RootScreenProps = NativeStackScreenProps<Navigator, RouteNames.root>;

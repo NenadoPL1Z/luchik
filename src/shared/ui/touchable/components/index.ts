@@ -1,2 +1,2 @@
 export { TouchableIcon } from "./touchable-icon";
-export { TouchableLink } from "./touchable-link";
+export { TouchablePush } from "./touchable-push";
