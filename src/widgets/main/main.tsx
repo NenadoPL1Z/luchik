@@ -8,6 +8,8 @@ export const Main = ({ withBackground = true, withPadding = true, children }: Ma
   return (
     <View style={[styles.root, { width: "100%", marginBottom: withPadding ? OFFSET_MAP.LAYOUT : undefined }]}>
       <ScrollView
+        indicatorStyle="black"
+        showsVerticalScrollIndicator={true}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{ padding: OFFSET_MAP.HORIZONTAL }}
         style={[
