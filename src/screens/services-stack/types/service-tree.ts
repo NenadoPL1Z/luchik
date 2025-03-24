@@ -2,7 +2,8 @@ import type { JSX } from "react";
 
 export type ServiceTreeContent = {
   title: string;
-  render: () => JSX.Element;
+  subtitle?: string;
+  render?: () => JSX.Element;
 };
 
 export type ServiceTreeChildren = {
