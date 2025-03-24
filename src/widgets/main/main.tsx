@@ -11,7 +11,10 @@ export const Main = ({ withBackground = true, withPadding = true, children }: Ma
         indicatorStyle="black"
         showsVerticalScrollIndicator={true}
         showsHorizontalScrollIndicator={false}
-        contentContainerStyle={{ padding: OFFSET_MAP.HORIZONTAL, paddingTop: 0 }}
+        contentContainerStyle={{
+          padding: OFFSET_MAP.HORIZONTAL,
+          paddingTop: withPadding ? OFFSET_MAP.HORIZONTAL : 0,
+        }}
         style={[
           styles.scroll,
           {

@@ -7,7 +7,7 @@ const NativeStack = createNativeStackNavigator<Navigator>();
 
 export const ServiceStack = ({ navigation }: ServicesStackProps) => {
   return (
-    <NativeStack.Navigator initialRouteName={RouteNames.root} screenOptions={{ headerShown: false }}>
+    <NativeStack.Navigator initialRouteName={RouteNames.root} screenOptions={{ headerShown: false, animation: "none" }}>
       <NativeStack.Screen
         name={RouteNames.root}
         component={(props: RootScreenProps) => <RootScreen {...props} onOpenDrawer={navigation.openDrawer} />}
