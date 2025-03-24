@@ -1,6 +1,7 @@
 import { Flex } from "@app/shared/ui";
 import { COLORS_MAP } from "@app/shared/types";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { OFFSET_MAP } from "@app/shared/constants";
 import { styles } from "./layout.styles";
 import type { LayoutProps } from "./types";
 
@@ -12,7 +13,7 @@ export const Layout = ({ style = {}, backgroundColor = "secondary", children }: 
       flexDirection="column"
       alignItems="flex-start"
       flexGrow={1}
-      gap={8}
+      gap={OFFSET_MAP.LAYOUT / 2}
       style={[
         styles.root,
         {
