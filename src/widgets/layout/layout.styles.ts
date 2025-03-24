@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   root: {
@@ -9,12 +9,12 @@ export const styles = StyleSheet.create({
     paddingTop: 10,
   },
   background: {
-    // position: "absolute",
-    // width: 100,
-    // height: 100,
-  },
-  image: {
-    // width: 100,
-    // height: 100,
+    flexGrow: 1,
+    position: "absolute",
+    top: -300,
+    left: 0,
+    zIndex: 0,
+    width: "100%",
+    height: Dimensions.get("window").height * 1.7,
   },
 });
