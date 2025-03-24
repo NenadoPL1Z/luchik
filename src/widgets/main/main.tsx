@@ -5,16 +5,14 @@ import { styles } from "./main.styles.ts";
 import type { MainProps } from "./types";
 
 export const Main = ({ withBackground = true, withPadding = true, children }: MainProps) => {
-  const paddingKey = withPadding ? "padding" : "paddingHorizontal";
   return (
     <View style={[styles.root, { width: "100%", marginBottom: withPadding ? OFFSET_MAP.LAYOUT : undefined }]}>
       <ScrollView
         showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.contentContainerStyle}
+        contentContainerStyle={{ padding: OFFSET_MAP.HORIZONTAL }}
         style={[
           styles.scroll,
           {
-            [paddingKey]: OFFSET_MAP.HORIZONTAL,
             marginHorizontal: withPadding ? OFFSET_MAP.HORIZONTAL : undefined,
             backgroundColor: withBackground ? COLORS_MAP.white : undefined,
           },
