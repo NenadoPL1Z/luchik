@@ -12,11 +12,11 @@ export const Layout = ({ style = {}, backgroundColor = "secondary", children }: 
       flexDirection="column"
       alignItems="flex-start"
       flexGrow={1}
-      gap={16}
+      gap={8}
       style={[
         styles.root,
         {
-          paddingTop: top || styles.root.paddingVertical,
+          paddingTop: top || styles.root.paddingTop,
           paddingRight: right,
           paddingLeft: left,
           backgroundColor: COLORS_MAP[backgroundColor],
