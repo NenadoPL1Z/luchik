@@ -11,7 +11,7 @@ export const ContentScreen = ({ route, navigation }: ContentScreenProps) => {
       <Main>
         <Flex flexDirection="column" gap={8}>
           {content.map(({ title, render }) => (
-            <Flex key={title} flexDirection="column" gap={8}>
+            <Flex style={{ width: "100%" }} key={title} flexDirection="column" gap={8}>
               <Typography variant="h2" style={{ textAlign: "center" }}>
                 {title}
               </Typography>

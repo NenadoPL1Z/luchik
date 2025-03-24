@@ -1,5 +1,5 @@
-import { View } from "react-native";
 import { Typography } from "@app/shared/ui";
+import { Table } from "./ui";
 import type { ServiceTree } from "../../types";
 
 export const SERVICES_TREE: ServiceTree[] = [
@@ -94,7 +94,16 @@ export const SERVICES_TREE: ServiceTree[] = [
           },
           {
             title: "График работы на 2024г.",
-            render: () => <View />,
+            render: () => (
+              <Table
+                timelines={[
+                  ["18.10.2024", "14:00-15:00"],
+                  ["25.10.2024", "14:00-15:00"],
+                  ["08.11.2024", "14:00-15:00"],
+                  ["22.11.2024", "14:00-15:00"],
+                ]}
+              />
+            ),
           },
         ],
       },
@@ -115,7 +124,16 @@ export const SERVICES_TREE: ServiceTree[] = [
           },
           {
             title: "График работы",
-            render: () => <View />,
+            render: () => (
+              <Table
+                timelines={[
+                  ["18.10.2024", "14:00-15:00"],
+                  ["25.10.2024", "14:00-15:00"],
+                  ["08.11.2024", "14:00-15:00"],
+                  ["22.11.2024", "14:00-15:00"],
+                ]}
+              />
+            ),
           },
         ],
       },
