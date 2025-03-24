@@ -3,9 +3,10 @@ import { Flex, Typography } from "@app/shared/ui";
 import { styles } from "./service-card.styles";
 import type { ServiceCardProps } from "./types";
 
-export const ServiceCard = ({ title, image, list }: ServiceCardProps) => {
+export const ServiceCard = (props: ServiceCardProps) => {
+  const { title, image, list, onPush } = props;
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={() => onPush(props)}>
       <Flex justifyContent="space-between" alignItems="flex-start" gap={8}>
         <Flex style={styles.text} alignItems="flex-start" flexDirection="column" gap={8}>
           <Typography variant="h2">{title}</Typography>

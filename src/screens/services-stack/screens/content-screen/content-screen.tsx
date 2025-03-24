@@ -1,10 +1,11 @@
-import { SafeAreaView, Text } from "react-native";
+import { Header, Layout, Main } from "@app/widgets";
 import type { ContentScreenProps } from "../../types";
 
-export const ContentScreen = ({ route }: ContentScreenProps) => {
+export const ContentScreen = ({ navigation }: ContentScreenProps) => {
   return (
-    <SafeAreaView>
-      <Text>{route.name}</Text>
-    </SafeAreaView>
+    <Layout>
+      <Header.Back title="Контент услуги" onPress={navigation.goBack} />
+      <Main>{null}</Main>
+    </Layout>
   );
 };

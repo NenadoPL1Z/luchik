@@ -1,10 +1,11 @@
-import { SafeAreaView, Text } from "react-native";
+import { Header, Layout, Main } from "@app/widgets";
 import type { ServiceScreenProps } from "../../types";
 
-export const ServiceScreen = ({ route }: ServiceScreenProps) => {
+export const ServiceScreen = ({ navigation }: ServiceScreenProps) => {
   return (
-    <SafeAreaView>
-      <Text>{route.name}</Text>
-    </SafeAreaView>
+    <Layout>
+      <Header.Back title="Услуга" onPress={navigation.goBack} />
+      <Main>{null}</Main>
+    </Layout>
   );
 };

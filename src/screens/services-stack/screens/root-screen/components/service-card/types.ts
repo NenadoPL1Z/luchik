@@ -1,3 +1,5 @@
-import type { Tree } from "../../../../types";
+import type { ServiceTree } from "../../../../types";
 
-export type ServiceCardProps = Omit<Tree, "children">;
+export type ServiceCardProps = ServiceTree & {
+  onPush: (service: ServiceTree) => void;
+};

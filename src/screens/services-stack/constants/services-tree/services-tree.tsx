@@ -1,7 +1,7 @@
 import { View } from "react-native";
-import type { Tree } from "../../types";
+import type { ServiceTree } from "../../types";
 
-export const SERVICES_TREE: Tree[] = [
+export const SERVICES_TREE: ServiceTree[] = [
   {
     title: "Меры социальной поддержки",
     image: require("./assets/images/social-support.jpg"),
