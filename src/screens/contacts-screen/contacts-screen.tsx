@@ -10,7 +10,7 @@ export const ContactsScreen = ({ navigation }: ContactsScreenProps) => {
     <Layout>
       <Header.Drawer title="Контакты" onPress={navigation.openDrawer} />
       <Main>
-        <Image style={styles.map} resizeMode="cover" source={require("./assets/images/map.jpg")} />
+        <Image style={styles.map} resizeMode="stretch" source={require("./assets/images/map.jpg")} />
         <Flex alignItems="flex-start" flexDirection="column" gap={8}>
           <TextBlock icon="LandmarkIcon24" title="Адрес">
             649100, Республика Алтай,{"\n"}Майминский район, село Майма,{"\n"}улица Ленина, 8А
