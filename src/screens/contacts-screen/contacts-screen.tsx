@@ -12,7 +12,6 @@ export const ContactsScreen = ({ navigation }: ContactsScreenProps) => {
       <Main>
         <Image style={styles.map} resizeMode="cover" source={require("./assets/images/map.jpg")} />
         <Flex alignItems="flex-start" flexDirection="column" gap={8}>
-          {null}
           <TextBlock icon="LandmarkIcon24" title="Адрес">
             649100, Республика Алтай,{"\n"}Майминский район, село Майма,{"\n"}улица Ленина, 8А
           </TextBlock>
