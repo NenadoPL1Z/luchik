@@ -1,4 +1,4 @@
-import { Image, Linking } from "react-native";
+import { Image, Linking, TouchableOpacity } from "react-native";
 import { Header, Layout, Main } from "@app/widgets";
 import { Flex, Typography } from "@app/shared/ui";
 import { TextBlock } from "./components";
@@ -10,7 +10,7 @@ export const ContactsScreen = ({ navigation }: ContactsScreenProps) => {
     <Layout>
       <Header.Drawer title="Контакты" onPress={navigation.openDrawer} />
       <Main>
-        <Image style={styles.map} resizeMode="contain" source={require("./assets/images/map.jpg")} />
+        <Image style={styles.map} resizeMode="cover" source={require("./assets/images/map.jpg")} />
         <Flex alignItems="flex-start" flexDirection="column" gap={8}>
           {null}
           <TextBlock icon="LandmarkIcon24" title="Адрес">
@@ -30,15 +30,19 @@ export const ContactsScreen = ({ navigation }: ContactsScreenProps) => {
             </Typography>
           </TextBlock>
           <TextBlock icon="WorldIcon24" title="Вебсайт">
-            <Typography variant="p" color="main" onPress={() => Linking.openURL("https://www.socza.ru")}>
-              www.socza.ru
-            </Typography>
+            <TouchableOpacity onPress={() => Linking.openURL("https://www.socza.ru")}>
+              <Typography variant="p" color="main">
+                www.socza.ru
+              </Typography>
+            </TouchableOpacity>
           </TextBlock>
           <Image style={styles.qr} source={require("./assets/images/qr-web.jpg")} />
           <TextBlock icon="ShareIcon24" title="Социальные сети">
-            <Typography variant="p" color="main" onPress={() => Linking.openURL("https://vk.com/club185287122")}>
-              ВКонтакте
-            </Typography>
+            <TouchableOpacity onPress={() => Linking.openURL("https://vk.com/club185287122")}>
+              <Typography variant="p" color="main">
+                ВКонтакте
+              </Typography>
+            </TouchableOpacity>
           </TextBlock>
           <Image style={styles.qr} source={require("./assets/images/qr-vk.jpg")} />
         </Flex>

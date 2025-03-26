@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
   },
   logo: {
     width: 180,
-    height: 160,
+    height: 164,
   },
   version: {
     opacity: 0.4,
