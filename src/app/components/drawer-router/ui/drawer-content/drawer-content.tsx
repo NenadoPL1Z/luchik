@@ -8,7 +8,7 @@ import type { DrawerContentProps } from "./types";
 export const DrawerContent = ({ navigation }: DrawerContentProps) => {
   return (
     <SafeAreaView style={styles.root}>
-      <Layout style={styles.layout} backgroundColor="main">
+      <Layout style={styles.layout} pattern="main" backgroundColor="main">
         <Header.Close onPress={navigation.closeDrawer} />
         <Main withBackground={false} withPadding={false}>
           <Flex flexDirection="column" gap={8}>

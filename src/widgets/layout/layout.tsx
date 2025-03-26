@@ -3,12 +3,12 @@ import { COLORS_MAP } from "@app/shared/types";
 import { OFFSET_MAP } from "@app/shared/constants";
 import { ImageBackground, SafeAreaView } from "react-native";
 import { styles } from "./layout.styles";
-import type { LayoutProps } from "./types";
+import { PATTERNS, type LayoutProps } from "./types";
 
-export const Layout = ({ style = {}, backgroundColor = "secondary", children }: LayoutProps) => {
+export const Layout = ({ style = {}, backgroundColor = "secondary", pattern = "main", children }: LayoutProps) => {
   return (
     <SafeAreaView style={[styles.root, { backgroundColor: COLORS_MAP[backgroundColor] }]}>
-      <ImageBackground style={styles.background} source={require("./assets/images/pattern.png")} />
+      <ImageBackground style={styles.background} source={PATTERNS[pattern]} />
       <Flex
         flexDirection="column"
         alignItems="flex-start"
