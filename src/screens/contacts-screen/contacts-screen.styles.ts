@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
     maxWidth: 500,
     width: "100%",
-    height: 300,
+    height: 250,
     marginBottom: 16,
     borderRadius: 12,
   },
