@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
     marginBottom: 16,
     borderRadius: 12,
   },
-  phone: { flex: 1 },
   qr: {
     width: 124,
     height: 124,
